@@ -1,0 +1,1 @@
+var greetUser = angular.module('greetUser',[]);
