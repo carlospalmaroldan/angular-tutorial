@@ -2,8 +2,7 @@ angular.
   module('phoneList').
   component('phoneList', {  
       templateUrl: 'phone-list/phone-list.template.html',
-    controller: function PhoneListController() {
-		createInterval(this.query,3000);
+      controller: function PhoneListController() {
 	 
       this.phones = [
 	
@@ -25,6 +24,4 @@ angular.
 	  this.orderProp = 'age';
     }
   });
-  function createInterval(dynamicParameter,interval) { 
-	setInterval(function() { console.log(dynamicParameter); }, interval); 
-  } 
+

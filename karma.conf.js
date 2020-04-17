@@ -21,10 +21,13 @@ module.exports = function(config) {
 	 'app.module.js',
 	 'phone-list/phone-list.module.js',	
 	 'greet-user/greet-user.module.js',
+	 'dynamic-phone-list/dynamic-phone-list.module.js',
 	 'phone-list/phone-list.component.js',
 	 'greet-user/greet-user.component.js',
+	 'dynamic-phone-list/dynamic-phone-list.component.js',
      'phone-list/*.spec.js',
-	 'greet-user/*.spec.js'
+	 'greet-user/*.spec.js',
+	 'dynamic-phone-list/*.spec.js'
     ],
 
 
