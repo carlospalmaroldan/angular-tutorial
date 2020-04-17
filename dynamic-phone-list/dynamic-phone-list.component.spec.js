@@ -11,17 +11,16 @@ describe('dynamicPhoneList', function() {
         // as the service while avoiding a name conflict.
 		beforeEach(inject(function($componentController,_$httpBackend_) {
 			$httpBackend = _$httpBackend_;
-			$httpBackend.expectGET('phones/phones.json')
+			$httpBackend.when('GET','phones/phones.json')
                   .respond([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
 			ctrl = $componentController('dynamicPhoneList');
 		}));
 		
 		
 		 it('should create a `phones` property with 2 phones fetched with `$http`', function() {
-			expect(ctrl.phones).toBeUndefined();
-
+			expect(ctrl.dynamicPhones).toBeUndefined();
 			$httpBackend.flush();
-			expect(ctrl.phones).toEqual([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
+			expect(ctrl.dynamicPhones).toEqual([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
 		});
 
 		it('should set a default value for the `orderProp` model', function() {

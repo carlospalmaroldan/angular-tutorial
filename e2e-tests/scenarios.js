@@ -3,7 +3,7 @@ describe('PhoneCat Application', function() {
   describe('phoneList', function() {
 
     beforeEach(function() {
-      browser.get('index.html');
+      browser.get('#!/phonelist');
     });
 
     it('should filter the phone list as a user types into the search box', function() {
@@ -47,13 +47,36 @@ describe('PhoneCat Application', function() {
         'Nexus S'
       ]);
 	  
-	  
-		
-		
 	});
-	
-	
 
   });
+  
+  //TESTS FOR THE DYNAMIC LIST
+  describe('dynamicPhoneList', function(){
+	beforeEach(function() {
+      browser.get('#!/dynamicphonelist');
+    });
+	it('should render phone specific links', function() {
+		var query = element(by.model('$ctrl.queryDynamic'));
+		query.sendKeys('nexus');
+
+		element.all(by.css('.phonesDynamic li a')).first().click();
+		expect(browser.getCurrentUrl()).toContain('#!/phones/nexus-s');
+	});
+  });
+
+  //SHOW PHONE DETAILS
+  describe('View: Phone detail', function() {
+
+    beforeEach(function() {
+      browser.get('#!/phonedetail/nexus-s');
+    });
+  
+    it('should display the `nexus-s` page', function() {
+      expect(element(by.binding('$ctrl.phone.name')).getText()).toBe('Nexus S');
+    });
+  
+  });
+
 
 }); 

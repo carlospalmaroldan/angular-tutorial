@@ -8,7 +8,7 @@ angular.
         self.orderProp = 'name';
 		
         $http.get('phones/phones.json').then(function(response) {
-          self.phones = response.data;
+          self.dynamicPhones = response.data;
         });
       }
     ]

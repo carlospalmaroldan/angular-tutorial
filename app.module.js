@@ -1,4 +1,4 @@
 angular.module('phonecatApp', [
   // ...which depends on the `phoneList` module
-  'greetUser','phoneList','dynamicPhoneList'
+  'greetUser','phoneList','dynamicPhoneList','ngRoute','phoneDetail'
 ]);
