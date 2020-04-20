@@ -9,7 +9,7 @@ Search: <input ng-model="$ctrl.queryDynamic"/>
 
 	<ul class="phonesDynamic">
 		<li ng-repeat="phone in $ctrl.dynamicPhones | filter:$ctrl.queryDynamic  |  orderBy:$ctrl.orderPropDynamic" class="thumbnail"> 				
-			<a href="#!/phones/{{phone.id}}" class="thumb">
+			<a href="#!/phonedetail/{{phone.id}}" class="thumb">
 			<img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
 			</a>
 			<a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
