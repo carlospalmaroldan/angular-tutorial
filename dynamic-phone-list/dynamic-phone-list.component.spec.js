@@ -18,7 +18,10 @@ describe('dynamicPhoneList', function() {
 		
 		
 		 it('should create a `phones` property with 2 phones fetched with `$http`', function() {
-			expect(ctrl.dynamicPhones).toBeUndefined();
+			 
+			jasmine.addCustomEqualityTester(angular.equals);
+
+			expect(ctrl.dynamicPhones).toEqual([]);
 			$httpBackend.flush();
 			expect(ctrl.dynamicPhones).toEqual([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
 		});

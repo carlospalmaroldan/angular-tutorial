@@ -1,1 +1,1 @@
- angular.module('dynamicPhoneList', []);
+ angular.module('dynamicPhoneList', ['core.phone']);

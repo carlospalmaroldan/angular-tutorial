@@ -18,12 +18,17 @@ module.exports = function(config) {
 	 'lib/angular-1.7.0/angular.js',
    'lib/angular-1.7.0/angular-mocks.js',
    'lib/angular-1.7.0/angular-route.js',
+   'lib/angular-1.7.0/angular-resource.js',
 	 '../node_modules/angular-mocks/angular-mocks.js',
 	 'app.module.js',
 	 'phone-list/phone-list.module.js',	
 	 'greet-user/greet-user.module.js',
 	 'dynamic-phone-list/dynamic-phone-list.module.js',
+	 'phone-detail/phone-detail.module.js',
+	 'phone-detail/phone-detail.component.js',
 	 'core/core.module.js',
+	 'core/phone/phone.module.js',
+	 'core/phone/phone.service.js',
 	 'phone-list/phone-list.component.js',
 	 'greet-user/greet-user.component.js',
 	 'dynamic-phone-list/dynamic-phone-list.component.js',
@@ -31,7 +36,8 @@ module.exports = function(config) {
 	 'core/checkmark/*.spec.js',
      'phone-list/*.spec.js',
 	 'greet-user/*.spec.js',
-	 'dynamic-phone-list/*.spec.js'
+	 'dynamic-phone-list/*.spec.js',
+	 'phone-detail/*.spec.js'
     ],
 
 
