@@ -9,7 +9,12 @@
     <img ng-src="{{img}}" />
   </li>
 </ul>
-
+<dl>
+  <dt>Infrared</dt>
+  <dd>{{$ctrl.phone.connectivity.infrared | checkmark}}</dd>
+  <dt>GPS</dt>
+  <dd>{{$ctrl.phone.connectivity.gps | checkmark}}</dd>
+</dl>
 <ul class="specs">
   <li>
     <span>Availability and Networks</span>

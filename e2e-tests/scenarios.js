@@ -61,7 +61,7 @@ describe('PhoneCat Application', function() {
 		query.sendKeys('nexus');
 
 		element.all(by.css('.phonesDynamic li a')).first().click();
-		expect(browser.getCurrentUrl()).toContain('#!/phones/nexus-s');
+		expect(browser.getCurrentUrl()).toContain('#!/phonedetail/nexus-s');
 	});
   });
 
