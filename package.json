@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "http-server": "^0.12.1",
-    "karma": "^4.4.1",
+    "karma": "^6.3.16",
     "karma-cli": "^2.0.0"
   },
   "devDependencies": {
